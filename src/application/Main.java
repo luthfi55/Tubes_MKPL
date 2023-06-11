@@ -9,11 +9,11 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(tes tes) throws Exception {
         Parent parent = (Parent) FXMLLoader.load(getClass().getResource(
                 "/view/MainPane.fxml"));
         Scene scene = new Scene(parent);
-        stage.setScene(scene);
+        tes.setScene(scene);
         stage.setTitle("Library");
         stage.show();
         
