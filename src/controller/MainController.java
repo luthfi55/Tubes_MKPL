@@ -117,23 +117,11 @@ public class MainController implements Initializable {
     }
     
     public ObservableList<Books> getBooksList(){
-    	ObservableList<Books> booksList = FXCollections.observableArrayList();
+    	
     	Connection connection = getConnection();
     	String query = "SELECT * FROM books ";
     	Statement st;
-    	ResultSet rs;
     	
-    	try {
-			st = connection.createStatement();
-			rs = st.executeQuery(query);
-			Books books;
-			while(rs.next()) {
-				books = new Books(rs.getInt("Id"),rs.getString("Title"),rs.getString("Author"),rs.getInt("Year"),rs.getInt("Pages"));
-				booksList.add(books);
-				}
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
     	return booksList;
     }
     
