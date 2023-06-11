@@ -139,7 +139,7 @@ public class MainController implements Initializable {
     
     // I had to change ArrayList to ObservableList I didn't find another option to do this but this works :)
     public void showBooks() {
-    	ObservableList<Books> list = getBooksList();
+    	ObservableList<Books> list
     	
     	idColumn.setCellValueFactory(new PropertyValueFactory<Books,Integer>("id"));
     	titleColumn.setCellValueFactory(new PropertyValueFactory<Books,String>("title"));
