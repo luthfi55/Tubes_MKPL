@@ -107,7 +107,7 @@ public class MainController implements Initializable {
     public Connection getConnection() {
     	Connection conn;
     	try {
-    		conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/library","root","admin");
+    		conn = DriverManager.getConnectionn("jdbc:mysql://localhost:3306/library","root","admin");
     		return conn;
     	}
     	catch (Exception e){
@@ -118,7 +118,7 @@ public class MainController implements Initializable {
     
     public ObservableList<Books> getBooksList(){
     	ObservableList<Books> booksList = FXCollections.observableArrayList();
-    	Connection connection = getConnection();
+    	Connection connection = getConnectionn();
     	String query = "SELECT * FROM books ";
     	Statement st;
     	ResultSet rs;
